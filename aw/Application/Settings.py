@@ -60,8 +60,8 @@ def switch_blooth_status(driver, status_: str = 'open', start_settings=True):
     if start_settings:
         Common.start_app(driver, settings.package_name)
         sleep(2)
-    if driver(resourceId=settings.SimpleMoreSettings.id, text=settings.SimpleMoreSettings.text).wait(timeout=3):
-        driver(rresourceId=settings.SimpleMoreSettings.id, text=settings.SimpleMoreSettings.text).click()
+    if driver(resourceId=settings.MoreSettings.id, text=settings.MoreSettings.text).wait(timeout=3):
+        driver(rresourceId=settings.MoreSettings.id, text=settings.MoreSettings.text).click()
         sleep(2)
         driver(resourceId=settings.SimpleWLAN.id, text=settings.SimpleWLAN.text).click()
         sleep(2)
