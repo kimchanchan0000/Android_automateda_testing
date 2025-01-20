@@ -656,3 +656,16 @@ def set_clipboard(driver, text):
     :return: 文本
     """
     return driver.set_clipboard(text)
+
+
+@keyword
+def enc(plain_text):
+    """
+    加密
+    :param plain_text: 明文
+    :return: 加密字符串
+    """
+    plain_bytes = plain_text.encode()
+    encrypted_bytes = base64.b64encode(plain_bytes)
+    encrypted_string = encrypted_bytes.decode()
+    return encrypted_string
